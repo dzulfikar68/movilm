@@ -7,12 +7,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- ../movieku/template/blogy-1.0.0/ -->
         <!-- META -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Untree.co">
-        <link rel="shortcut icon" href="libraries/blogy-1.0.0/favicon.png">
+        <link rel="shortcut icon" href="./libraries/blogy-1.0.0/favicon.png">
         <meta name="description" content="" />
         <meta name="keywords" content="bootstrap, bootstrap5" />
 
@@ -22,19 +21,18 @@
         <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
         <!-- ICONS -->
-        <link rel="stylesheet" href="libraries/blogy-1.0.0/fonts/icomoon/style.css">
-        <link rel="stylesheet" href="libraries/blogy-1.0.0/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./libraries/blogy-1.0.0/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./libraries/blogy-1.0.0/fonts/flaticon/font/flaticon.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
         <!-- BASIC CSS -->
-        <link rel="stylesheet" href="libraries/blogy-1.0.0/css/tiny-slider.css">
-        <link rel="stylesheet" href="libraries/blogy-1.0.0/css/aos.css">
-        <link rel="stylesheet" href="libraries/blogy-1.0.0/css/glightbox.min.css">
-        <link rel="stylesheet" href="libraries/blogy-1.0.0/css/style.css">
-        <link rel="stylesheet" href="libraries/blogy-1.0.0/css/flatpickr.min.css">
+        <link rel="stylesheet" href="./libraries/blogy-1.0.0/css/tiny-slider.css">
+        <link rel="stylesheet" href="./libraries/blogy-1.0.0/css/aos.css">
+        <link rel="stylesheet" href="./libraries/blogy-1.0.0/css/glightbox.min.css">
+        <link rel="stylesheet" href="./libraries/blogy-1.0.0/css/style.css">
+        <link rel="stylesheet" href="./libraries/blogy-1.0.0/css/flatpickr.min.css">
 
         <!-- CUSTOM CSS -->
-        <link rel="stylesheet" href="libraries/Pagination.js/dist/pagination.css">
         <style>
             /* .paginationjs-page {
                 height: 200px;
@@ -62,7 +60,7 @@
                     <div class="site-navigation">
                         <div class="row g-0 align-items-center">
                             <div class="col-2">
-                                <a href="index.html" class="logo m-0 float-start">Movilm<span class="text-primary">.</span></a>
+                                <a href="./index.html" class="logo m-0 float-start">Movilm<span class="text-primary">.</span></a>
                             </div>
                             <div class="col-8 text-center">
                                 <form action="#" class="search-form d-inline-block d-lg-none">
@@ -71,27 +69,27 @@
                                 </form>
     
                                 <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu mx-auto">
-                                    <li class="active"><a href="index.html">Home</a></li>
-                                    <li class="has-children">
-                                        <a href="pages/movies-list.html">Movie</a>
+                                    <li id="nav-home"><a href="./index.html">Home</a></li>
+                                    <li id="nav-movie" class="has-children">
+                                        <a href="./pages/movies-list.html">Movie</a>
                                         <ul class="dropdown">
-                                            <li><a href="pages/movies-list.html?feature=now-playing">Now Playing</a></li>
-                                            <li><a href="pages/movies-list.html?feature=popular">Popular</a></li>
-                                            <li><a href="pages/movies-list.html?feature=top-rated">Top Rated</a></li>
-                                            <li><a href="pages/movies-list.html?feature=upcoming">Upcoming</a></li>
+                                            <li><a href="./pages/movies-list.html?feature=now-playing">Now Playing</a></li>
+                                            <li><a href="./pages/movies-list.html?feature=popular">Popular</a></li>
+                                            <li><a href="./pages/movies-list.html?feature=top-rated">Top Rated</a></li>
+                                            <li><a href="./pages/movies-list.html?feature=upcoming">Upcoming</a></li>
                                         </ul>
                                     </li>
-                                    <li class="has-children">
-                                        <a href="pages/tvs-list.html">TV Series</a>
+                                    <li id="nav-tv" class="has-children">
+                                        <a href="./pages/tvs-list.html">TV Series</a>
                                         <ul class="dropdown">
-                                            <li><a href="pages/tvs-list.html?feature=airing-today">Airing Today</a></li>
-                                            <li><a href="pages/tvs-list.html?feature=on-the-air">On The Air</a></li>
-                                            <li><a href="pages/tvs-list.html?feature=popular">Popular</a></li>
-                                            <li><a href="pages/tvs-list.html?feature=top-rated">Top Rated</a></li>
+                                            <li><a href="./pages/tvs-list.html?feature=airing-today">Airing Today</a></li>
+                                            <li><a href="./pages/tvs-list.html?feature=on-the-air">On The Air</a></li>
+                                            <li><a href="./pages/tvs-list.html?feature=popular">Popular</a></li>
+                                            <li><a href="./pages/tvs-list.html?feature=top-rated">Top Rated</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="pages/persons-list.html">Actor & Actress</a></li>
-                                    <li><a href="pages/about.html">About</a></li>
+                                    <li id="nav-person"><a href="./pages/persons-list.html">Actor & Actress</a></li>
+                                    <li id="nav-about"><a href="./pages/about.html">About</a></li>
                                 </ul>
                             </div>
                             <div class="col-2 text-end">
@@ -115,49 +113,49 @@
                 <div class="row align-items-stretch retro-layout">
                     <div class="col-md-4">
 
-                        <a id="LinkMovieNowPlaying" href="#" class="h-entry mb-30 v-height gradient">
-                            <div id="ImageMovieNowPlaying" class="featured-img" style="background-image: url('libraries/blogy-1.0.0/images/img_2_horizontal.jpg');"></div>
+                        <a id="link-movie-now-playing" href="#" class="h-entry mb-30 v-height gradient">
+                            <div id="image-movie-now-playing" class="featured-img" style="background-image: url('libraries/blogy-1.0.0/images/img_2_horizontal.jpg');"></div>
                             <div class="text">
                                 <span class="date">Now Playing Movie</span>
-                                <h2 id="TitleMovieNowPlaying">Lorem ipsum dolor sit amet</h2>
+                                <h2 id="title-movie-now-playing">Lorem ipsum dolor sit amet</h2>
                             </div>
                         </a>
 
-                        <a id="LinkTvAiringToday" href="#" class="h-entry v-height gradient">
-                            <div id="ImageTvAiringToday" class="featured-img" style="background-image: url('libraries/blogy-1.0.0/images/img_5_horizontal.jpg');"></div>
+                        <a id="link-tv-airing-today" href="#" class="h-entry v-height gradient">
+                            <div id="image-tv-airing-today" class="featured-img" style="background-image: url('libraries/blogy-1.0.0/images/img_5_horizontal.jpg');"></div>
                             <div class="text">
                                 <span class="date">Airing Today, TV Series</span>
-                                <h2 id="TitleTvAiringToday">Lorem ipsum dolor sit amet</h2>
+                                <h2 id="title-tv-airing-today">Lorem ipsum dolor sit amet</h2>
                             </div>
                         </a>
 
                     </div>
                     <div class="col-md-4">
 
-                        <a id="LinkMovieUpcoming" href="#" class="h-entry img-5 h-100 gradient">
-                            <div id="ImageMovieUpcoming" class="featured-img" style="background-image: url('libraries/blogy-1.0.0/images/img_1_vertical.jpg');"></div>
+                        <a id="link-movie-upcoming" href="#" class="h-entry img-5 h-100 gradient">
+                            <div id="image-movie-upcoming" class="featured-img" style="background-image: url('libraries/blogy-1.0.0/images/img_1_vertical.jpg');"></div>
                             <div class="text">
                                 <span class="date">Upcoming Movie</span>
-                                <h2 id="TitleMovieUpcoming">Lorem ipsum dolor sit amet</h2>
+                                <h2 id="title-movie-upcoming">Lorem ipsum dolor sit amet</h2>
                             </div>
                         </a>
 
                     </div>
                     <div class="col-md-4">
 
-                        <a id="LinkTvOnTheAir" href="#" class="h-entry mb-30 v-height gradient">
-                            <div id="ImageTvOnTheAir" class="featured-img" style="background-image: url('libraries/blogy-1.0.0/images/img_3_horizontal.jpg');"></div>
+                        <a id="link-tv-on-the-air" href="#" class="h-entry mb-30 v-height gradient">
+                            <div id="image-tv-on-the-air" class="featured-img" style="background-image: url('libraries/blogy-1.0.0/images/img_3_horizontal.jpg');"></div>
                             <div class="text">
                                 <span class="date">On The Air, TV Series</span>
-                                <h2 id="TitleTvOnTheAir">Lorem ipsum dolor sit amet</h2>
+                                <h2 id="title-tv-on-the-air">Lorem ipsum dolor sit amet</h2>
                             </div>
                         </a>
 
-                        <a id="LinkPersonPopular" href="#" class="h-entry v-height gradient">
-                            <div id="ImagePersonPopular" class="featured-img" style="background-image: url('libraries/blogy-1.0.0/images/img_4_horizontal.jpg');"></div>
+                        <a id="link-person-popular" href="#" class="h-entry v-height gradient">
+                            <div id="image-person-popular" class="featured-img" style="background-image: url('libraries/blogy-1.0.0/images/img_4_horizontal.jpg');"></div>
                             <div class="text">
                                 <span class="date">Popular Actor & Actress</span>
-                                <h2 id="TitlePersonPopular">Lorem ipsum dolor sit amet</h2>
+                                <h2 id="title-person-popular">Lorem ipsum dolor sit amet</h2>
                             </div>
                         </a>
                         
@@ -195,48 +193,26 @@
         </div>
 
         <!-- BASIC JS -->
-        <script src="libraries/blogy-1.0.0/js/bootstrap.bundle.min.js"></script>
-        <script src="libraries/blogy-1.0.0/js/tiny-slider.js"></script>
-        <script src="libraries/blogy-1.0.0/js/flatpickr.min.js"></script>
-        <script src="libraries/blogy-1.0.0/js/aos.js"></script>
-        <script src="libraries/blogy-1.0.0/js/glightbox.min.js"></script>
-        <script src="libraries/blogy-1.0.0/js/navbar.js"></script>
-        <script src="libraries/blogy-1.0.0/js/counter.js"></script>
-        <script src="libraries/blogy-1.0.0/js/custom.js"></script>
-        <!-- <script src="js/model.js"></script> -->
+        <script src="./libraries/blogy-1.0.0/js/bootstrap.bundle.min.js"></script>
+        <script src="./libraries/blogy-1.0.0/js/tiny-slider.js"></script>
+        <script src="./libraries/blogy-1.0.0/js/flatpickr.min.js"></script>
+        <script src="./libraries/blogy-1.0.0/js/aos.js"></script>
+        <script src="./libraries/blogy-1.0.0/js/glightbox.min.js"></script>
+        <script src="./libraries/blogy-1.0.0/js/navbar.js"></script>
+        <script src="./libraries/blogy-1.0.0/js/counter.js"></script>
+        <script src="./libraries/blogy-1.0.0/js/custom.js"></script>
 
         <!-- CUSTOM JS -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="libraries/Pagination.js/dist/pagination.js"></script>
+        <script src="./js/utils.js"></script>
+        <script src="./js/nav-movilm.js"></script>
         <script>
-            // $.ajax({
-            //     type: 'GET',
-            //     url: 'https://lawless-fixture.000webhostapp.com/movilm/get-favorites.php',
-            //     success: function(data) {
-            //         console.log("data:")
-            //         console.log(JSON.parse(data))
-            //     },
-            //     error: function(error) {
-            //         console.log("error:")
-            //         console.log(error)
-            //     }
-            // })
+
+            //=========================
 
             // set timer
             const startTimeout = function(action, duration) { 
                 setTimeout(action, duration) 
-            }
-
-            // set random list
-            function shuffle(array) {
-                var tmp, current, top = array.length;
-                if(top) while(--top) {
-                    current = Math.floor(Math.random() * (top + 1));
-                    tmp = array[current];
-                    array[current] = array[top];
-                    array[top] = tmp;
-                }
-                return array;
             }
 
             // set model
@@ -286,46 +262,41 @@
             var tvAiringToday = getModel()
             var tvOnTheAir = getModel()
 
-            function getImage(path) {
-                let imageUrl = ""
-                if (path == null) {
-                    imageUrl = "images/image_placeholder.jpg"
-                } else {
-                    imageUrl = "https://image.tmdb.org/t/p/original" + path
-                }
-                return imageUrl
-            }
-
             // set view
             function setMovieNowPlaying(data) {
-                let imageUrl = getImage(data.active.poster_path)
+                let imageUrl = getImage(data.active.backdrop_path)
                 let textTitle = data.active.original_title
-                $('#ImageMovieNowPlaying').css('background-image', 'url(' + imageUrl + ')')
-                $('#TitleMovieNowPlaying').text(textTitle)
+                $('#image-movie-now-playing').css('background-image', 'url(' + imageUrl + ')')
+                $('#title-movie-now-playing').text(textTitle)
+                $('#link-movie-now-playing').attr("href", getUrl(data.active))
             }
             function setMovieUpcoming(data) {
                 let imageUrl = getImage(data.active.poster_path)
                 let textTitle = data.active.original_title
-                $('#ImageMovieUpcoming').css('background-image', 'url(' + imageUrl + ')')
-                $('#TitleMovieUpcoming').text(textTitle)
+                $('#image-movie-upcoming').css('background-image', 'url(' + imageUrl + ')')
+                $('#title-movie-upcoming').text(textTitle)
+                $('#link-movie-upcoming').attr("href", getUrl(data.active))
             }
             function setPersonPopular(data) {
                 let imageUrl = getImage(data.active.profile_path)
                 let textTitle = data.active.name
-                $('#ImagePersonPopular').css('background-image', 'url(' + imageUrl + ')')
-                $('#TitlePersonPopular').text(textTitle)
+                $('#image-person-popular').css('background-image', 'url(' + imageUrl + ')')
+                $('#title-person-popular').text(textTitle)
+                $('#link-person-popular').attr("href", getUrl(data.active))
             }
             function setTvAiringToday(data) {
-                let imageUrl = getImage(data.active.poster_path)
+                let imageUrl = getImage(data.active.backdrop_path)
                 let textTitle = data.active.name
-                $('#ImageTvAiringToday').css('background-image', 'url(' + imageUrl + ')')
-                $('#TitleTvAiringToday').text(textTitle)
+                $('#image-tv-airing-today').css('background-image', 'url(' + imageUrl + ')')
+                $('#title-tv-airing-today').text(textTitle)
+                $('#link-tv-airing-today').attr("href", getUrl(data.active))
             }
             function setTvOnTheAir(data) {
-                let imageUrl = getImage(data.active.poster_path)
+                let imageUrl = getImage(data.active.backdrop_path)
                 let textTitle = data.active.name
-                $('#ImageTvOnTheAir').css('background-image', 'url(' + imageUrl + ')')
-                $('#TitleTvOnTheAir').text(textTitle)
+                $('#image-tv-on-the-air').css('background-image', 'url(' + imageUrl + ')')
+                $('#title-tv-on-the-air').text(textTitle)
+                $('#link-tv-on-the-air').attr("href", getUrl(data.active))
             }
 
             // fetch api
@@ -354,7 +325,8 @@
             }
 
             // on click
-            $('#LinkMovieNowPlaying').click(function() {
+            $('#link-movie-now-playing').click(function() {
+                return
                 window.location.href = getDestinationPage("movies-list", [
                     {
                         key: "feature",
@@ -362,7 +334,8 @@
                     }
                 ])
             })
-            $('#LinkMovieUpcoming').click(function() {
+            $('#link-movie-upcoming').click(function() {
+                return
                 window.location.href = getDestinationPage("movies-list", [
                     {
                         key: "feature",
@@ -370,7 +343,8 @@
                     }
                 ])
             })
-            $('#LinkPersonPopular').click(function() {
+            $('#link-person-popular').click(function() {
+                return
                 window.location.href = getDestinationPage("persons-list", [
                     {
                         key: "feature",
@@ -378,7 +352,8 @@
                     }
                 ])
             })
-            $('#LinkTvAiringToday').click(function() {
+            $('#link-tv-airing-today').click(function() {
+                return
                 window.location.href = getDestinationPage("tvs-list", [
                     {
                         key: "feature",
@@ -386,7 +361,8 @@
                     }
                 ])
             })
-            $('#LinkTvOnTheAir').click(function() {
+            $('#link-tv-on-the-air').click(function() {
+                return
                 window.location.href = getDestinationPage("tvs-list", [
                     {
                         key: "feature",
@@ -395,19 +371,7 @@
                 ])
             })
 
-            // var url = new URLSearchParams(window.location.search)
-            // var x = url.get("q")
-            // console.log(x)
-            // url.append('active', '1')
-            // console.log(url.toString())
-// Assuming URL has "?post=1234&action=edit"
-// var urlParams = new URLSearchParams(window.location.search);
-// console.log(urlParams.has('post')); // true
-// console.log(urlParams.get('action')); // "edit"
-// console.log(urlParams.getAll('action')); // ["edit"]
-// console.log(urlParams.toString()); // "?post=1234&action=edit"
-// console.log(urlParams.append('active', '1')); // "?
-// post=1234&action=edit&active=1"
+
         </script>
     </body>
 </html>

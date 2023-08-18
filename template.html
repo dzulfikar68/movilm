@@ -7,12 +7,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- ../movieku/template/blogy-1.0.0/ -->
         <!-- META -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Untree.co">
-        <link rel="shortcut icon" href="libraries/blogy-1.0.0/favicon.png">
+        <link rel="shortcut icon" href="../libraries/blogy-1.0.0/favicon.png">
         <meta name="description" content="" />
         <meta name="keywords" content="bootstrap, bootstrap5" />
 
@@ -22,19 +21,19 @@
         <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
         <!-- ICONS -->
-        <link rel="stylesheet" href="libraries/blogy-1.0.0/fonts/icomoon/style.css">
-        <link rel="stylesheet" href="libraries/blogy-1.0.0/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="../libraries/blogy-1.0.0/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="../libraries/blogy-1.0.0/fonts/flaticon/font/flaticon.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
         <!-- BASIC CSS -->
-        <link rel="stylesheet" href="libraries/blogy-1.0.0/css/tiny-slider.css">
-        <link rel="stylesheet" href="libraries/blogy-1.0.0/css/aos.css">
-        <link rel="stylesheet" href="libraries/blogy-1.0.0/css/glightbox.min.css">
-        <link rel="stylesheet" href="libraries/blogy-1.0.0/css/style.css">
-        <link rel="stylesheet" href="libraries/blogy-1.0.0/css/flatpickr.min.css">
+        <link rel="stylesheet" href="../libraries/blogy-1.0.0/css/tiny-slider.css">
+        <link rel="stylesheet" href="../libraries/blogy-1.0.0/css/aos.css">
+        <link rel="stylesheet" href="../libraries/blogy-1.0.0/css/glightbox.min.css">
+        <link rel="stylesheet" href="../libraries/blogy-1.0.0/css/style.css">
+        <link rel="stylesheet" href="../libraries/blogy-1.0.0/css/flatpickr.min.css">
 
         <!-- CUSTOM CSS -->
-        <link rel="stylesheet" href="libraries/Pagination.js/dist/pagination.css">
+        <link rel="stylesheet" href="../libraries/Pagination.js/dist/pagination.css">
         <style>
             /* .paginationjs-page {
                 height: 200px;
@@ -62,7 +61,7 @@
                     <div class="site-navigation">
                         <div class="row g-0 align-items-center">
                             <div class="col-2">
-                                <a href="index.html" class="logo m-0 float-start">Movilm<span class="text-primary">.</span></a>
+                                <a href="../index.html" class="logo m-0 float-start">Movilm<span class="text-primary">.</span></a>
                             </div>
                             <div class="col-8 text-center">
                                 <form action="#" class="search-form d-inline-block d-lg-none">
@@ -71,27 +70,27 @@
                                 </form>
     
                                 <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu mx-auto">
-                                    <li class="active"><a href="index.html">Home</a></li>
-                                    <li class="has-children">
-                                        <a href="pages/movies-list.html">Movie</a>
+                                    <li id="nav-home"><a href="../index.html">Home</a></li>
+                                    <li id="nav-movie" class="has-children">
+                                        <a href="../pages/movies-list.html">Movie</a>
                                         <ul class="dropdown">
-                                            <li><a href="pages/movies-list.html?feature=now-playing">Now Playing</a></li>
-                                            <li><a href="pages/movies-list.html?feature=popular">Popular</a></li>
-                                            <li><a href="pages/movies-list.html?feature=top-rated">Top Rated</a></li>
-                                            <li><a href="pages/movies-list.html?feature=upcoming">Upcoming</a></li>
+                                            <li><a href="../pages/movies-list.html?feature=now-playing">Now Playing</a></li>
+                                            <li><a href="../pages/movies-list.html?feature=popular">Popular</a></li>
+                                            <li><a href="../pages/movies-list.html?feature=top-rated">Top Rated</a></li>
+                                            <li><a href="../pages/movies-list.html?feature=upcoming">Upcoming</a></li>
                                         </ul>
                                     </li>
-                                    <li class="has-children">
-                                        <a href="pages/tvs-list.html">TV Series</a>
+                                    <li id="nav-tv" class="has-children">
+                                        <a href="../pages/tvs-list.html">TV Series</a>
                                         <ul class="dropdown">
-                                            <li><a href="pages/tvs-list.html?feature=airing-today">Airing Today</a></li>
-                                            <li><a href="pages/tvs-list.html?feature=on-the-air">On The Air</a></li>
-                                            <li><a href="pages/tvs-list.html?feature=popular">Popular</a></li>
-                                            <li><a href="pages/tvs-list.html?feature=top-rated">Top Rated</a></li>
+                                            <li><a href="../pages/tvs-list.html?feature=airing-today">Airing Today</a></li>
+                                            <li><a href="../pages/tvs-list.html?feature=on-the-air">On The Air</a></li>
+                                            <li><a href="../pages/tvs-list.html?feature=popular">Popular</a></li>
+                                            <li><a href="../pages/tvs-list.html?feature=top-rated">Top Rated</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="pages/persons-list.html">Actor & Actress</a></li>
-                                    <li><a href="pages/about.html">About</a></li>
+                                    <li id="nav-person"><a href="../pages/persons-list.html">Actor & Actress</a></li>
+                                    <li id="nav-about"><a href="../pages/about.html">About</a></li>
                                 </ul>
                             </div>
                             <div class="col-2 text-end">
@@ -147,20 +146,37 @@
         </div>
 
         <!-- BASIC JS -->
-        <script src="libraries/blogy-1.0.0/js/bootstrap.bundle.min.js"></script>
-        <script src="libraries/blogy-1.0.0/js/tiny-slider.js"></script>
-        <script src="libraries/blogy-1.0.0/js/flatpickr.min.js"></script>
-        <script src="libraries/blogy-1.0.0/js/aos.js"></script>
-        <script src="libraries/blogy-1.0.0/js/glightbox.min.js"></script>
-        <script src="libraries/blogy-1.0.0/js/navbar.js"></script>
-        <script src="libraries/blogy-1.0.0/js/counter.js"></script>
-        <script src="libraries/blogy-1.0.0/js/custom.js"></script>
-        <!-- <script src="js/model.js"></script> -->
+        <script src="../libraries/blogy-1.0.0/js/bootstrap.bundle.min.js"></script>
+        <script src="../libraries/blogy-1.0.0/js/tiny-slider.js"></script>
+        <script src="../libraries/blogy-1.0.0/js/flatpickr.min.js"></script>
+        <script src="../libraries/blogy-1.0.0/js/aos.js"></script>
+        <script src="../libraries/blogy-1.0.0/js/glightbox.min.js"></script>
+        <script src="../libraries/blogy-1.0.0/js/navbar.js"></script>
+        <script src="../libraries/blogy-1.0.0/js/counter.js"></script>
+        <script src="../libraries/blogy-1.0.0/js/custom.js"></script>
 
         <!-- CUSTOM JS -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="libraries/Pagination.js/dist/pagination.js"></script>
+        <script src="../libraries/Pagination.js/dist/pagination.js"></script>
+        <script src="../js/nav-movilm.js"></script>
         <script>
+            // pagination
+            // var array = Array.from({ length: 48 }, (e, i) => i + 1)
+            // $('#pagination').pagination({
+            //     dataSource: array,
+            //     pageSize: 1,
+            //     pageRange: 5,
+            //     callback: function(data, pagination) {
+            //         console.log("data:")
+            //         console.log(data)
+            //         console.log("pagination:")
+            //         console.log(pagination)
+            //         console.log("number:")
+            //         console.log(data[0])
+            //     }
+            // })
+            // $('#pagination').pagination(8)
+            
             // $.ajax({
             //     type: 'GET',
             //     url: 'https://lawless-fixture.000webhostapp.com/movilm/get-favorites.php',
@@ -191,3 +207,4 @@
         </script>
     </body>
 </html>
+
