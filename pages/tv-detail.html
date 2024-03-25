@@ -1,0 +1,519 @@
+<!-- /*
+* Template Name: Blogy
+* Template Author: Untree.co
+* Template URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- META -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Untree.co">
+        <link rel="shortcut icon" href="../libraries/blogy-1.0.0/favicon.png">
+        <meta name="description" content="" />
+        <meta name="keywords" content="bootstrap, bootstrap5" />
+
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <!-- ICONS -->
+        <link rel="stylesheet" href="../libraries/blogy-1.0.0/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="../libraries/blogy-1.0.0/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+        <!-- BASIC CSS -->
+        <link rel="stylesheet" href="../libraries/blogy-1.0.0/css/tiny-slider.css">
+        <link rel="stylesheet" href="../libraries/blogy-1.0.0/css/aos.css">
+        <link rel="stylesheet" href="../libraries/blogy-1.0.0/css/glightbox.min.css">
+        <link rel="stylesheet" href="../libraries/blogy-1.0.0/css/style.css">
+        <link rel="stylesheet" href="../libraries/blogy-1.0.0/css/flatpickr.min.css">
+
+        <!-- CUSTOM CSS -->
+        <link rel="stylesheet" href="../css/error-404.css">
+        <link rel="stylesheet" href="../css/movilm.css">
+        <style></style>
+
+        <!-- TITLE -->
+        <title>MOVILM</title>
+    </head>
+    <body>
+        <!-- NAVIGATION -->
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close">
+                    <span class="icofont-close js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+        <nav class="site-nav">
+            <div class="container">
+                <div class="menu-bg-wrap">
+                    <div class="site-navigation">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-2">
+                                <a href="../index.html" class="logo m-0 float-start">Movilm<span class="text-primary">.</span></a>
+                            </div>
+                            <div class="col-8 text-center">
+                                <form action="#" class="search-form d-inline-block d-lg-none">
+                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <span class="bi-search"></span>
+                                </form>
+    
+                                <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu mx-auto">
+                                    <li id="nav-home"><a href="../index.html">Home</a></li>
+                                    <li id="nav-movie" class="has-children">
+                                        <a href="../pages/movies-list.html">Movie</a>
+                                        <ul class="dropdown">
+                                            <li><a href="../pages/movies-list.html?feature=now-playing">Now Playing</a></li>
+                                            <li><a href="../pages/movies-list.html?feature=popular">Popular</a></li>
+                                            <li><a href="../pages/movies-list.html?feature=top-rated">Top Rated</a></li>
+                                            <li><a href="../pages/movies-list.html?feature=upcoming">Upcoming</a></li>
+                                        </ul>
+                                    </li>
+                                    <li id="nav-tv" class="has-children">
+                                        <a href="../pages/tvs-list.html">TV Series</a>
+                                        <ul class="dropdown">
+                                            <li><a href="../pages/tvs-list.html?feature=airing-today">Airing Today</a></li>
+                                            <li><a href="../pages/tvs-list.html?feature=on-the-air">On The Air</a></li>
+                                            <li><a href="../pages/tvs-list.html?feature=popular">Popular</a></li>
+                                            <li><a href="../pages/tvs-list.html?feature=top-rated">Top Rated</a></li>
+                                        </ul>
+                                    </li>
+                                    <li id="nav-person"><a href="../pages/persons-list.html">Actor & Actress</a></li>
+                                    <li id="nav-about"><a href="../pages/about.html">About</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-2 text-end">
+                                <a href="#" class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light">
+                                    <span></span>
+                                </a>
+                                <form action="#" class="search-form d-none d-lg-inline-block">
+                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <span class="bi-search"></span>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div id="backdrop-path" class="site-cover site-cover-sm same-height overlay single-page" style="background-image: url('../images/image_placeholder.png');">
+            <div class="container">
+                <div class="row same-height justify-content-center">
+                    <div class="col-md-6">
+                        <div class="post-entry text-center">
+                            <h1 id="original-title" class="mb-4">Title</h1>
+                            <h5 id="tagline" class="mb-4">tagline</h3>
+                            <div class="post-meta align-items-center text-center pt-5">
+                                <figure class="author-figure mb-0 me-1 d-inline-block"><img src="../images/icon_movie.png" alt="Image" class="img-fluid"></figure>
+                                <span id="genres" class="d-inline-block mt-1">-</span>
+                                <span style="margin-right: 50px;"></span>
+                                <figure class="author-figure mb-0 me-1 d-inline-block"><img src="../images/icon_date.png" alt="Image" class="img-fluid"></figure>
+                                <span id="release-date">-</span>
+                            </div>
+                            <div class="post-meta align-items-center text-center">
+                                <figure class="author-figure mb-0 me-1 d-inline-block"><img src="../images/icon_rated.png" alt="Image" class="img-fluid"></figure>
+                                <span id="vote" class="d-inline-block mt-1">-</span>
+                                <span style="margin-right: 50px;"></span>
+                                <figure class="author-figure mb-0 me-1 d-inline-block"><img src="../images/icon_popular.png" alt="Image" class="img-fluid"></figure>
+                                <span id="popularity">-</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="container">
+                <div class="row blog-entries element-animate">
+
+                    <div class="col-md-12 col-lg-8 main-content">
+
+                        <div class="post-content-body">
+                            <p id="overview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium nam quas inventore, ut iure iste modi eos adipisci ad ea itaque labore earum autem nobis et numquam, minima eius. Nam eius, non unde ut aut sunt eveniet rerum repellendus porro.</p>
+                            <div id="poster-content" class="row my-4">
+                                <div class="col-md-8 mb-4">
+                                    <img id="poster-path" src="../images/image_placeholder.png" style="cursor: pointer;" title="example" alt="Image placeholder" class="img-fluid rounded">
+                                </div>
+                            </div>
+                            <div id="backdrop-content" class="row my-4">
+                                <div class="col-md-8 mb-4">
+                                    <img id="backdrop-path-2" src="../images/image_placeholder.png" style="cursor: pointer;" title="example" alt="Image placeholder" class="img-fluid rounded">
+                                </div>
+                            </div>
+                            <div id="production-companies" class="row col-md-8 my-4"></div>
+                        </div>
+
+                        <div class="pt-3">
+                            <p>Production Countries:
+                                <span id="production-countries" style="margin-right: 50px;"></span>
+                                Spoken Languages: 
+                                <span id="spoken-languages"></span>
+                            </p>
+                        </div>
+
+                        <div id="reviews-parent" class="pt-5 comment-wrap">
+                            <h3 id="reviews-count" class="mb-5 heading">0 Comments</h3>
+                            <ul id="reviews" class="comment-list"></ul>
+                            <p id="reviews-more">
+                                <a onclick="onMoreReviews()" class='col-sm-12 btn btn-sm btn-outline-primary'>More</a>
+                            </p>
+                            <!-- END comment-list -->
+                        </div>
+
+                        <section id="recommends-parent" class="section posts-entry posts-entry-sm bg-light">
+                            <!-- <div class="container"> -->
+                                <div class="row mb-4">
+                                    <div class="col-12 text-uppercase text-black pt-5">Recommendations TV</div>
+                                </div>
+                                <div id="recommends" class="row"></div>
+                                <p id="recommends-more">
+                                    <a onclick="onMoreRecommends()" class='col-sm-12 btn btn-sm btn-outline-primary'>More</a>
+                                </p>
+                            <!-- </div> -->
+                        </section>
+
+                    </div>
+
+                    <!-- END main-content -->
+
+                    <div id="similar-parent" class="col-md-12 col-lg-4 sidebar">
+                        <div class="sidebar-box">
+                            <h3 class="heading">Similar TV</h3>
+                            <div class="post-entry-sidebar">
+                                <ul id="similar"></ul>
+                                <p id="similar-more">
+                                    <a onclick="onMoreSimilar()" class='col-sm-12 btn btn-sm btn-outline-primary'>More</a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- END sidebar-box -->
+
+                        <div id="keywords-parent" class="sidebar-box">
+                            <h3 class="heading">Keywords</h3>
+                            <ul id="keywords" class="tags"></ul>
+                        </div>
+                        <!-- END sidebar-box -->
+
+                        <div id="lists-parent" class="sidebar-box">
+                            <h3 class="heading">Lists</h3>
+                            <ul id="lists" class="categories"></ul>
+                        </div>
+                        <!-- END sidebar-box -->
+                    </div>
+                    <!-- END sidebar -->
+
+                </div>
+            </div>
+        </section>
+        <!-- End retroy layout blog posts -->
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="col-12 text-center">
+                <!-- 
+                    **==========
+                    NOTE: 
+                    Please don't remove this copyright link unless you buy the license here https://untree.co/license/  
+                    **==========
+                    -->
+                    <p>Copyright &copy; <a href="https://dzulfikar68.github.io">dzulfikar68</a> | <script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a>  Distributed by <a href="https://themewagon.com">ThemeWagon</a> <!-- License information: https://untree.co/license/ -->
+                    </p>
+                </div>
+            </div> <!-- /.container -->
+        </footer> <!-- /.site-footer -->
+    
+        <!-- Preloader -->
+        <div id="overlayer"></div>
+        <div class="loader">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+
+        <!-- BASIC JS -->
+        <script src="../libraries/blogy-1.0.0/js/bootstrap.bundle.min.js"></script>
+        <script src="../libraries/blogy-1.0.0/js/tiny-slider.js"></script>
+        <script src="../libraries/blogy-1.0.0/js/flatpickr.min.js"></script>
+        <script src="../libraries/blogy-1.0.0/js/aos.js"></script>
+        <script src="../libraries/blogy-1.0.0/js/glightbox.min.js"></script>
+        <script src="../libraries/blogy-1.0.0/js/navbar.js"></script>
+        <script src="../libraries/blogy-1.0.0/js/counter.js"></script>
+        <script src="../libraries/blogy-1.0.0/js/custom.js"></script>
+
+        <!-- CUSTOM JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://momentjs.com/downloads/moment.js"></script>
+        <script src="../libraries/moment/moment.js"></script>
+        <script src="../js/utils.js"></script>
+        <script src="../js/nav-movilm.js"></script>
+        <script>
+
+            var movieId = getDetailId()
+            
+            // function fetch api movie basic
+            function fetchApiDetail(path, id) {
+                $("#detail-movie").show()
+                $("#error-404").hide()
+                $.get(
+                    "https://api.themoviedb.org/3/" + path + "/" + id + "?api_key=3f7d1c2a7daf6b9f4668c8cf54074ed1"
+                ).done(function(data, status, res){ 
+                    console.log(data)
+                    $("#original-title").text(data.name)
+                    $("#tagline").text(data.tagline)
+                    $("#overview").text(data.overview)
+                    $("#popularity").text(data.popularity)
+                    $('#release-date').text(moment(data.first_air_date).format("DD MMMM YYYY"))
+                    let average = (Math.round(data.vote_average * 100) / 100).toFixed(1);
+                    $("#vote").text(average + " (" + data.vote_count + ")")
+                    let poster = data.poster_path
+                    let backdrop = data.backdrop_path
+                    let poster_view = (poster != null) ? poster : backdrop
+                    let backdrop_view = (backdrop != null) ? backdrop : poster
+                    if(poster_view != null) {
+                        $("#poster-path").attr("src", getImage(poster_view))
+                    } else {
+                        $("#poster-content").hide()
+                    }
+                    if(backdrop != null) {
+                        $("#backdrop-path-2").attr("src", getImage(backdrop))
+                    } else {
+                        $("#backdrop-content").hide()
+                    }
+                    $("#poster-path").attr("title", data.name)
+                    $("#backdrop-path").css('background-image', 'url(' + getImage(backdrop_view) + ')')
+                    let genres = data.genres.map(function myFunction(item) {
+                        return " " + item.name
+                    })
+                    $("#genres").text(genres)
+                    data.production_companies.forEach(e => {
+                        let path = e.logo_path
+                        if (path != null) {
+                            let itemView = "<div class='col-md-4 mb-2 pt-1' style='cursor: pointer;' title='"+ e.name + "'>" +
+                                "<img src='" + getImage(path) + "' alt='"+ e.name + "' class='img-fluid'>" +
+                            "</div>"
+                            $("#production-companies").append(itemView)
+                        }
+                    })
+                    data.production_countries.forEach((e, i) => {
+                        let name = " " + e.name
+                        let coma = (i >= (data.production_countries.length - 1)) ? "" : ","
+                        let view = "<a href='#'>" + name + "</a>" + coma
+                        $("#production-countries").append(view)
+                    })
+                    data.spoken_languages.forEach((e, i) => {
+                        let name = " " + e.english_name
+                        let coma = (i >= (data.spoken_languages.length - 1)) ? "" : ","
+                        let view = "<a href='#'>" + name + "</a>" + coma
+                        $("#spoken-languages").append(view)
+                    })
+                    $("#detail-movie").show()
+                    $("#error-404").hide()
+                }).fail(function(data, status){
+                    $("#detail-movie").hide()
+                    $("#error-404").show()
+                });
+            }
+            fetchApiDetail('tv', movieId)
+
+            // function fetch api movie basic
+            var similarPage = 1
+            function fetchApiSimilar(path, id, page) {
+                $("#similar-parent").hide()
+                $.get(
+                    "https://api.themoviedb.org/3/" + path + "/" + id + "/similar" + "?api_key=3f7d1c2a7daf6b9f4668c8cf54074ed1" + "&page=" + page
+                ).done(function(data, status, res){ 
+                    // let listRandom = shuffle(data.results)
+                    let listRandom = data.results
+                    listRandom.forEach( e => {
+                        let imageView = null
+                        if (e.poster_path == null) {
+                            imageView = e.backdrop_path
+                        } else {
+                            imageView = e.poster_path
+                        }
+                        let itemSimilar = "<li>" +
+                                    "<a href='" + getUrlTV(e) + "'>" +
+                                        "<img src='" + getImage(imageView) + "' alt='Image placeholder' class='me-4 rounded'>" +
+                                        "<div class='text'>" +
+                                            "<h4>" + e.name + "</h4>" +
+                                            "<div class='post-meta'>" +
+                                                "<span class='mr-2'>" + moment(e.release_date).format("MMM Do YY") + "</span>" +
+                                            "</div>" +
+                                        "</div>" +
+                                    "</a>" +
+                                "</li>"
+                        $("#similar").append(itemSimilar)
+                    })
+                    similarPage = data.page + 1
+                    if (data.page < data.total_pages) {
+                        $("#similar-more").show()
+                    } else {
+                        $("#similar-more").hide()
+                    }
+                    $("#similar-parent").show()
+                }).fail(function(data, status){
+                    $("#similar-parent").hide()
+                });
+            }
+            fetchApiSimilar('tv', movieId, similarPage)
+
+            function onMoreSimilar() {
+                fetchApiSimilar('tv', movieId, similarPage)
+            }
+
+            // function fetch api movie basic
+            function fetchApiKeywords(path, id) {
+                $("#keywords-parent").hide()
+                $.get(
+                    "https://api.themoviedb.org/3/" + path + "/" + id + "/keywords" + "?api_key=3f7d1c2a7daf6b9f4668c8cf54074ed1"
+                ).done(function(data, status, res){ 
+                    console.log(data)
+                    let listRandom = data.results
+                    listRandom.forEach( e => {
+                        let itemView = "<li><a href='#'>" + e.name + "</a></li>"
+                        $("#keywords").append(itemView)
+                    })
+                    $("#keywords-parent").show()
+                }).fail(function(data, status){
+                    $("#keywords-parent").hide()
+                });
+            }
+            fetchApiKeywords('tv', movieId)
+
+            // function fetch api movie basic
+            function fetchApiLists(path, id) {
+                $("#lists-parent").hide()
+                $.get(
+                    "https://api.themoviedb.org/3/" + path + "/" + id + "/lists" + "?api_key=3f7d1c2a7daf6b9f4668c8cf54074ed1"
+                ).done(function(data, status, res){ 
+                    let listRandom = data.results
+                    listRandom.forEach( e => {
+                        let itemView = "<li><a href='#'>" + e.name + "<span>(" + e.item_count + ")</span></a></li>"
+                        $("#lists").append(itemView)
+                    })
+                    $("#lists-parent").show()
+                }).fail(function(data, status){
+                    $("#lists-parent").hide()
+                });
+            }
+            fetchApiLists('tv', movieId)
+
+            // function fetch api movie basic
+            var lengthReviews = 0
+            var reviewsPage = 1
+            function fetchApiReviews(path, id, page) {
+                $("#reviews-parent").hide()
+                $.get(
+                    "https://api.themoviedb.org/3/" + path + "/" + id + "/reviews" + "?api_key=3f7d1c2a7daf6b9f4668c8cf54074ed1" + "&page=" + page
+                ).done(function(data, status, res){ 
+                    let listRandom = data.results
+                    listRandom.forEach( (e, i) => {
+                        let itemView = '<li class="comment">' +
+                            '<div class="vcard">' +
+                            '<img src="' + getImagePerson(e.author_details.avatar_path) + '" alt="Image placeholder">' +
+                            '</div>' +
+                            '<div class="comment-body">' +
+                            '<h3>' + e.author + '</h3>' +
+                            '<div class="meta">' + moment(e.updated_at).format("MMM Do YY") + '</div>' +
+                            '<p id="text-review-' + e.id + '" class="overflow-wrap-0">' + e.content + '</p>' +
+                            "<p><a id='" + e.id + "' class='review reply rounded'>Show</a></p>" +
+                            '</div>' +
+                        '</li>'
+                        $("#reviews").append(itemView)
+                    })
+                    lengthReviews = lengthReviews + listRandom.length
+                    $("#reviews-count").text(lengthReviews + " Comments")
+                    $("#reviews-parent").show()
+                    $("a.review").click(
+                        function(e) {
+                            let idText = $(this).attr('id')
+                            let target = $('#text-review-' + idText)
+                            let classText = "overflow-wrap-0"
+                            if(target.hasClass(classText)) {
+                                target.removeClass(classText)
+                                $(this).text("Less")
+                            } else {
+                                target.addClass(classText)
+                                $(this).text("Show")
+                            }
+                        }
+                    )
+                    reviewsPage = data.page + 1
+                    if (data.page < data.total_pages) {
+                        $("#reviews-more").show()
+                    } else {
+                        $("#reviews-more").hide()
+                    }
+                    if (data.total_results > 0) {
+                        $("#reviews-parent").show()
+                    } else {
+                        $("#reviews-parent").hide()
+                    }
+                }).fail(function(data, status){
+                    if (reviewsPage == 1) {
+                        $("#reviews-count").text("0 Comments")
+                        $("#reviews-parent").hide()
+                    }
+                })
+            }
+            fetchApiReviews('movie', movieId, reviewsPage)
+
+            function onMoreReviews() {
+                fetchApiReviews('movie', movieId, reviewsPage)
+            }
+
+            // function fetch api movie basic
+            var recommendsPage = 1
+            function fetchApiRecommends(path, id, page) {
+                $("#recommends-parent").hide()
+                $.get(
+                    "https://api.themoviedb.org/3/" + path + "/" + id + "/recommendations" + "?api_key=3f7d1c2a7daf6b9f4668c8cf54074ed1" + "&page=" + page
+                ).done(function(data, status, res){ 
+                    let listRandom = data.results
+                    listRandom.forEach( e => {
+                        let itemView = '<div class="col-md-6 col-lg-3 pt-3">' +
+                            '<div class="blog-entry">' +
+                                '<a href="' + getUrlTV(e) + '" class="img-link">' +
+                                '<img src="' + getImage(e.backdrop_path) + '" alt="Image" class="img-fluid">' +
+                                '</a>' +
+                                '<span class="date">' + moment(e.release_date).format("MMM Do YY") + '</span>' +
+                                '<h2><a href="' + getUrlTV(e) + '">' + e.name + '</a></h2>' +
+                                '<p class="overflow-wrap">' + e.overview + '</p>' +
+                                '<p><a href="#" class="read-more">Continue Reading</a></p>' +
+                            '</div>' +
+                        '</div>'
+                        $("#recommends").append(itemView)
+                    })
+                    recommendsPage = data.page + 1
+                    if (data.page < data.total_pages) {
+                        $("#recommends-more").show()
+                    } else {
+                        $("#recommends-more").hide()
+                    }
+                    if (data.total_results > 0) {
+                        $("#recommends-parent").show()
+                    } else {
+                        $("#recommends-parent").hide()
+                    }
+                }).fail(function(data, status){
+                    if (recommendsPage == 1) {
+                        $("#recommends-parent").hide()
+                    }
+                })
+            }
+            fetchApiRecommends('tv', movieId, recommendsPage)
+
+            function onMoreRecommends() {
+                fetchApiRecommends('tv', movieId, recommendsPage)
+            }
+        </script>
+    </body>
+</html>

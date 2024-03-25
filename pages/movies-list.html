@@ -293,12 +293,16 @@
 
             function doScrollingView() {
                 function doAction() {
-                    let viewScroll = getView()
-                    console.log(viewScroll)
-                    if (viewScroll != null && viewScroll > 0) {
-                        let targetScroll = "item-" + viewScroll
-                        var access = document.getElementById(targetScroll)
-                        access.scrollIntoView();
+                    try {
+                        let viewScroll = getView()
+                        console.log(viewScroll)
+                        if (viewScroll != null && viewScroll > 0) {
+                            let targetScroll = "item-" + viewScroll
+                            var access = document.getElementById(targetScroll)
+                            access.scrollIntoView();
+                        }
+                    } catch(e) {
+                        
                     }
                 }
                 setTimeout(doAction, 500)

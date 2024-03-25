@@ -154,7 +154,7 @@
                         <a id="link-person-popular" href="#" class="h-entry v-height gradient">
                             <div id="image-person-popular" class="featured-img" style="background-image: url('libraries/blogy-1.0.0/images/img_4_horizontal.jpg');"></div>
                             <div class="text">
-                                <span class="date">Popular Actor & Actress</span>
+                                <span class="date">Trending Actor & Actress</span>
                                 <h2 id="title-person-popular">Lorem ipsum dolor sit amet</h2>
                             </div>
                         </a>
@@ -278,7 +278,24 @@
                 $('#link-movie-upcoming').attr("href", getUrl(data.active))
             }
             function setPersonPopular(data) {
-                let imageUrl = getImage(data.active.profile_path)
+                let imageOne = data.active.profile_path
+                let imageTwo = ""
+                try {
+                    imageTwo = data.active.known_for[0].poster_path
+                } catch(e) {
+                    imageTwo = getImagePerson(null)
+                }
+                function getPersonImage() {
+                    let final = ""
+                    if (imageOne != null) {
+                        final = imageOne
+                    } else {
+                        final = imageTwo
+                    }
+                    return final
+                }
+                let imageFinal = getPersonImage()
+                let imageUrl = getImage(imageFinal)
                 let textTitle = data.active.name
                 $('#image-person-popular').css('background-image', 'url(' + imageUrl + ')')
                 $('#title-person-popular').text(textTitle)
@@ -300,11 +317,11 @@
             }
 
             // fetch api
-            fetchApiList("person/popular", personPopular, setPersonPopular, 9000)
-            fetchApiList("tv/airing_today", tvAiringToday, setTvAiringToday, 8000)
-            fetchApiList("tv/on_the_air", tvOnTheAir, setTvOnTheAir, 7000)
-            fetchApiList("movie/upcoming", movieUpcoming, setMovieUpcoming, 6000)
-            fetchApiList("movie/now_playing", movieNowPlaying, setMovieNowPlaying, 5000)
+            fetchApiList("trending/person/week", personPopular, setPersonPopular, 15000)
+            fetchApiList("tv/airing_today", tvAiringToday, setTvAiringToday, 14000)
+            fetchApiList("tv/on_the_air", tvOnTheAir, setTvOnTheAir, 13000)
+            fetchApiList("movie/upcoming", movieUpcoming, setMovieUpcoming, 12000)
+            fetchApiList("movie/now_playing", movieNowPlaying, setMovieNowPlaying, 11000)
 
             // get origin path
             function getOriginPath() {

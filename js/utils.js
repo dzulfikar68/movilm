@@ -18,6 +18,14 @@ function getUrl(item) {
     }
 }
 
+function getUrlTV(item) {
+    if (isHome() == true) {
+        return "./pages/tv-detail.html?id=" + item.id
+    } else {
+        return "../pages/tv-detail.html?id=" + item.id
+    }
+}
+
 function getFeature() {
     return getQuery('feature')
 }

@@ -265,10 +265,12 @@
                 $.get(
                     "https://api.themoviedb.org/3/" + path + "/" + id + "?api_key=3f7d1c2a7daf6b9f4668c8cf54074ed1"
                 ).done(function(data, status, res){ 
+                    console.log(data)
                     $("#original-title").text(data.title)
                     $("#tagline").text(data.tagline)
                     $("#overview").text(data.overview)
                     $("#popularity").text(data.popularity)
+                    $('#release-date').text(moment(data.release_date).format("DD MMMM YYYY"))
                     let average = (Math.round(data.vote_average * 100) / 100).toFixed(1);
                     $("#vote").text(average + " (" + data.vote_count + ")")
                     let poster = data.poster_path
