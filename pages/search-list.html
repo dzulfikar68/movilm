@@ -1,0 +1,485 @@
+<!-- /*
+* Template Name: Blogy
+* Template Author: Untree.co
+* Template URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- META -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Untree.co">
+        <link rel="shortcut icon" href="../libraries/blogy-1.0.0/favicon.png">
+        <meta name="description" content="" />
+        <meta name="keywords" content="bootstrap, bootstrap5" />
+
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <!-- ICONS -->
+        <link rel="stylesheet" href="../libraries/blogy-1.0.0/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="../libraries/blogy-1.0.0/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+        <!-- BASIC CSS -->
+        <link rel="stylesheet" href="../libraries/blogy-1.0.0/css/tiny-slider.css">
+        <link rel="stylesheet" href="../libraries/blogy-1.0.0/css/aos.css">
+        <link rel="stylesheet" href="../libraries/blogy-1.0.0/css/glightbox.min.css">
+        <link rel="stylesheet" href="../libraries/blogy-1.0.0/css/style.css">
+        <link rel="stylesheet" href="../libraries/blogy-1.0.0/css/flatpickr.min.css">
+
+        <!-- CUSTOM CSS -->
+        <link rel="stylesheet" href="../libraries/Pagination.js/dist/pagination.css">
+        <link rel="stylesheet" href="../css/error-404.css">
+        <link rel="stylesheet" href="../css/movilm.css">
+        <style></style>
+
+        <!-- TITLE -->
+        <title>MOVILM</title>
+    </head>
+    <body>
+        <!-- NAVIGATION -->
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close">
+                    <span class="icofont-close js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+        <nav class="site-nav">
+            <div class="container">
+                <div class="menu-bg-wrap">
+                    <div class="site-navigation">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-2">
+                                <a href="../index.html" class="logo m-0 float-start">Movilm<span class="text-primary">.</span></a>
+                            </div>
+                            <div class="col-8 text-center">
+                                <form action="#" class="search-form d-inline-block d-lg-none">
+                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <span class="bi-search"></span>
+                                </form>
+    
+                                <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu mx-auto">
+                                    <li id="nav-home"><a href="../index.html">Home</a></li>
+                                    <li id="nav-movie" class="has-children">
+                                        <a href="../pages/movies-list.html">Movie</a>
+                                        <ul class="dropdown">
+                                            <li><a href="../pages/movies-list.html?feature=now-playing">Now Playing</a></li>
+                                            <li><a href="../pages/movies-list.html?feature=popular">Popular</a></li>
+                                            <li><a href="../pages/movies-list.html?feature=top-rated">Top Rated</a></li>
+                                            <li><a href="../pages/movies-list.html?feature=upcoming">Upcoming</a></li>
+                                        </ul>
+                                    </li>
+                                    <li id="nav-tv" class="has-children">
+                                        <a href="../pages/tvs-list.html">TV Series</a>
+                                        <ul class="dropdown">
+                                            <li><a href="../pages/tvs-list.html?feature=airing-today">Airing Today</a></li>
+                                            <li><a href="../pages/tvs-list.html?feature=on-the-air">On The Air</a></li>
+                                            <li><a href="../pages/tvs-list.html?feature=popular">Popular</a></li>
+                                            <li><a href="../pages/tvs-list.html?feature=top-rated">Top Rated</a></li>
+                                        </ul>
+                                    </li>
+                                    <li id="nav-person"><a href="../pages/persons-list.html">Actor & Actress</a></li>
+                                    <li id="nav-about"><a href="../pages/about.html">About</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-2 text-end">
+                                <a href="#" class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light">
+                                    <span></span>
+                                </a>
+                                <form onSubmit="return false;" class="search-form d-none d-lg-inline-block">
+                                    <input id="search-form-text" type="text" class="form-control" placeholder="Search...">
+                                    <span class="bi-search"></span>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero overlay inner-page bg-primary py-5">
+            <div class="container">
+                <div class="row align-items-center justify-content-center text-center pt-5">
+                <div class="col-lg-6">
+                    <h1 id="title-heading" class="heading text-white mb-3" data-aos="fade-up">Title</h1>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN -->
+        <div class="section search-result-wrap">
+            <div class="container">
+                
+                <div class="row posts-entry">
+                <div class="col-lg-8">
+                    <!-- <div class="row border-bottom">
+                        <div class="pagination-movilm"></div>
+                    </div> -->
+
+                    <div id="list-items"></div>
+
+                    <div id="error-404">
+                        <div class="fof">
+                                <h1>Halaman tidak tersedia.</h1>
+                        </div>
+                    </div>
+
+                    <div class="row text-start pt-5 border-top">
+                        <div class="col-md-12">
+                            <div class="pagination-movilm"></div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-lg-4 sidebar">
+                    <div class="sidebar-box search-form-wrap mb-4">
+                        <!-- <form action="#" class="sidebar-search-form">
+                            <span class="bi-search"></span>
+                            <input type="text" class="form-control" id="s" placeholder="Type a keyword and hit enter">
+                        </form> -->
+                        </div>
+                        <!-- END sidebar-box -->
+                        <div class="sidebar-box">
+                        <h3 id="popular-title" class="heading">Popular Posts</h3>
+                        <div class="post-entry-sidebar">
+                            <ul id="popular-posts"></ul>
+                        </div>
+                        </div>
+                        <!-- END sidebar-box -->
+            
+                        <!-- <div class="sidebar-box">
+                        <h3 class="heading">Categories</h3>
+                        <ul class="categories">
+                            <li><a href="#">Food <span>(12)</span></a></li>
+                            <li><a href="#">Travel <span>(22)</span></a></li>
+                            <li><a href="#">Lifestyle <span>(37)</span></a></li>
+                            <li><a href="#">Business <span>(42)</span></a></li>
+                            <li><a href="#">Adventure <span>(14)</span></a></li>
+                        </ul>
+                        </div>
+            
+                        <div class="sidebar-box">
+                            <h3 class="heading">Tags</h3>
+                            <ul class="tags">
+                                <li><a href="#">Travel</a></li>
+                                <li><a href="#">Adventure</a></li>
+                                <li><a href="#">Food</a></li>
+                                <li><a href="#">Lifestyle</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">Freelancing</a></li>
+                                <li><a href="#">Travel</a></li>
+                                <li><a href="#">Adventure</a></li>
+                                <li><a href="#">Food</a></li>
+                                <li><a href="#">Lifestyle</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">Freelancing</a></li>
+                            </ul>
+                        </div> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- End retroy layout blog posts -->
+
+        <!-- <h1>This is a Heading</h1> -->
+        <!-- <p>This is a paragraph.</p> -->
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="col-12 text-center">
+                <!-- 
+                    **==========
+                    NOTE: 
+                    Please don't remove this copyright link unless you buy the license here https://untree.co/license/  
+                    **==========
+                    -->
+                    <p>Copyright &copy; <a href="https://dzulfikar68.github.io">dzulfikar68</a> | <script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a>  Distributed by <a href="https://themewagon.com">ThemeWagon</a> <!-- License information: https://untree.co/license/ -->
+                    </p>
+                </div>
+            </div> <!-- /.container -->
+        </footer> <!-- /.site-footer -->
+    
+        <!-- Preloader -->
+        <div id="overlayer"></div>
+        <div class="loader">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+
+        <!-- BASIC JS -->
+        <script src="../libraries/blogy-1.0.0/js/bootstrap.bundle.min.js"></script>
+        <script src="../libraries/blogy-1.0.0/js/tiny-slider.js"></script>
+        <script src="../libraries/blogy-1.0.0/js/flatpickr.min.js"></script>
+        <script src="../libraries/blogy-1.0.0/js/aos.js"></script>
+        <script src="../libraries/blogy-1.0.0/js/glightbox.min.js"></script>
+        <script src="../libraries/blogy-1.0.0/js/navbar.js"></script>
+        <script src="../libraries/blogy-1.0.0/js/counter.js"></script>
+        <script src="../libraries/blogy-1.0.0/js/custom.js"></script>
+
+        <!-- CUSTOM JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://momentjs.com/downloads/moment.js"></script>
+        <script src="../libraries/Pagination.js/dist/pagination.js"></script>
+        <script src="../libraries/moment/moment.js"></script>
+        <script src="../js/utils.js"></script>
+        <script src="../js/nav-movilm.js"></script>
+        <script>
+            // init data
+            var originData = {}
+            var originList = []
+            var firstCall = false
+            var link = "search/multi"
+            var popular = "trending/all/week"
+            var thisPage = 1
+            var itemFeature = getMenuAndFeature().feature
+            var query = getQuery('search')
+            // let isMovie = (item.menu == "movie")
+
+            $("#list-items").show()
+            $("#error-404").hide()
+
+            function setTitle() {
+                let heading = $('#title-heading')
+                heading.text("Search Result: " + query)
+                $('#search-form-text')
+                var search = $('#search-form-text')
+                search.val(query)
+                var len = search.val().length;
+                search.focus();
+                search[0].setSelectionRange(len, len);
+            }
+            setTitle()
+
+            function onItemClick(id) {
+                setView(id)
+            }
+
+            function setViewList(data) {
+                data.forEach(e => {
+                    // target='_blank'
+                    let imageView = ""
+                    if(e.media_type == "person") {
+                        imageView = e.profile_path
+                    } else if(e.poster_path == null) {
+                        imageView = e.backdrop_path
+                    } else {
+                        imageView = e.poster_path
+                    }
+                    var name = ""
+                    if (e.media_type == "movie") {
+                        name = e.title
+                    } else {
+                        name = e.name
+                    }
+                    var desc = ""
+                    if (e.media_type == "person") {
+                        desc = e.known_for_department
+                    } else {
+                        desc = e.overview
+                    }
+                    var itemMovie = "<div id='item-" + e.id + "' class='blog-entry d-flex blog-entry-search-item'>" +
+                        "<a onclick='onItemClick(" + e.id + ")' href='" + getUrl(e) + "' class='img-link me-4'>" + 
+                            "<img onerror='imageError(this)' src='" + getImage(imageView) + "' alt='Image' class='img-fluid'>" +
+                        "</a>" +
+                        "<div>" +
+                            "<span class='date'>" + moment(e.release_date).format("MMM Do YY") + 
+                                " &bullet; <a href='https://www.google.com/search?q=rating " + name + 
+                                "'>Rate: " + e.vote_average + "</a></span>" +
+                            "<h2><a onclick='onItemClick(" + e.id + ")' href='" + getUrl(e) + "'>" + name + "</a></h2>" +
+                            "<p class='overflow-wrap-2' style='width: 500px;'>" + desc + "</p>" +
+                            "<p><a onclick='onItemClick(" + e.id + ")' href='" + getUrl(e) + "' class='btn btn-sm btn-outline-primary'>Read More</a></p>" +
+                        "</div>" +
+                    "</div>"
+                    $("div#list-items").append(itemMovie)
+                });
+            }
+
+            function doScrollingView() {
+                function doAction() {
+                    try {
+                        let viewScroll = getView()
+                        if (viewScroll != null && viewScroll > 0) {
+                            let targetScroll = "item-" + viewScroll
+                            var access = document.getElementById(targetScroll)
+                            access.scrollIntoView();
+                        }
+                    } catch(e) {
+                        
+                    }
+                }
+                setTimeout(doAction, 500)
+            }
+
+            // function fetch api movie basic
+            function fetchApiList(path, page) {
+                $(".pagination-movilm").hide()
+                $('div#list-items').empty();
+                $.get(
+                    "https://api.themoviedb.org/3/" + path + "?api_key=3f7d1c2a7daf6b9f4668c8cf54074ed1" + "&page=" + page + "&query=" + getQuery('search')
+                ).done(function(data, status, res){ 
+                    console.log("data:")
+                    console.log(data)
+                    originData = data
+                    let { results } = data
+                    originList = results
+                    setViewList(results)
+                    if (firstCall == false) {
+                        setPagination() 
+                    } else {
+                        setPage(page)
+                    }
+                    $(".pagination-movilm").show()
+                    $("#list-items").show()
+                    $("#error-404").hide()
+                    doScrollingView()
+                }).fail(function(data, status){
+                    // var r = confirm("Halaman gagal memuat, apakah mau refresh halaman?");
+                    // if (r == true) {
+                    //     location.reload();
+                    // }
+                    // e.preventDefault()
+                    $(".pagination-movilm").show()
+                    $("#list-items").hide()
+                    $("#error-404").show()
+                });
+            }
+
+            // if (itemFeature == "popular") {
+            //     link = "movie/popular"
+            // } else if (itemFeature == "top-rated") {
+            //     link = "movie/top_rated"
+            // } else if (itemFeature == "upcoming") {
+            //     link = "movie/upcoming"
+            // } else {
+            //     link = "movie/now_playing"
+            // }
+
+            fetchApiList(link, thisPage)
+
+            //=================================================================================
+
+            // pagination
+            function setPagination() {
+                //set page
+                var arrayPagination = Array.from({ length: originData.total_pages }, (e, i) => i + 1)
+                $('.pagination-movilm').pagination({
+                    dataSource: arrayPagination,
+                    pageSize: 1,
+                    pageRange: 5,
+                    callback: function(data, pagination) {
+                        $('html, body').animate({ scrollTop: 0 }, 'fast');
+                        let numberPagination = data[0]
+                        if (firstCall == true) {
+                            fetchApiList(link, numberPagination)
+                        }
+                        firstCall = true
+                    }
+                })
+                // reset page
+                let urlPage = getPage()
+                if (urlPage != null && urlPage > 0) {
+                    firstCall = true
+                    $('.pagination-movilm').pagination(urlPage)
+                }
+            }
+
+            //================================================
+
+            // get popular
+            function setViewPopular(data) {
+                data.forEach(e => {
+                    // target='_blank'
+                    let imageView = ""
+                    if(e.media_type == "person") {
+                        imageView = e.profile_path
+                    } else if(e.poster_path == null) {
+                        imageView = e.backdrop_path
+                    } else {
+                        imageView = e.poster_path
+                    }
+                    var name = ""
+                    if (e.media_type == "movie") {
+                        name = e.title
+                    } else {
+                        name = e.name
+                    }
+                    var desc = ""
+                    if (e.media_type == "person") {
+                        desc = e.known_for_department
+                    } else {
+                        desc = e.overview
+                    }
+                    var itemMovie = "<li>" +
+                                        "<a href='" + getUrl(e) + "'>" +
+                                            "<img onerror='imageError(this)' src='" + getImage(imageView) + "' alt='Image placeholder' class='me-4 rounded'>" +
+                                            "<div class='text'>" +
+                                                "<h4>" + name + "</h4>" +
+                                                "<div class='post-meta'>" +
+                                                "<span class='mr-2'>" + moment(e.release_date).format("MMM Do YY") + "</span>" +
+                                                "</div>" +
+                                            "</div>" +
+                                        "</a>" +
+                                    "</li>"
+                    $("ul#popular-posts").append(itemMovie)
+                });
+            }
+
+            function fetchApiPopular(path) {
+                $.get(
+                    "https://api.themoviedb.org/3/" + path + "?api_key=3f7d1c2a7daf6b9f4668c8cf54074ed1", 
+                    function(data, status) {
+                        console.log("popular:")
+                        console.log(data)
+                        let { results } = data
+                        setViewPopular(shuffle(results))
+                    }
+                )
+            }
+            $("#popular-title").text("Trending Post")
+            fetchApiPopular(popular)
+
+            // get origin path
+            function getOriginPath() {
+                let href = window.location.href
+                let listPath = href.split("movilm")
+                let originPath = listPath[0] + "movilm"
+                return originPath
+            }
+
+            // get destination page
+            function getDestinationPage(path, queries) {
+                let origin = getOriginPath() + "/pages/" + path + ".html"
+                let url = new URLSearchParams()
+                queries.forEach(e => {
+                    url.append(e.key, e.value)
+                })
+                return origin + "?" + url.toString()
+            }
+
+            var input = document.getElementById('search-form-text');
+            var callback = (e) => {
+                e.preventDefault()
+                var q = $("#search-form-text").val()
+                if (e.code === 'Enter') {
+                    window.location.href = getDestinationPage("search-list", [
+                        {
+                            key: "search",
+                            value: q
+                        }
+                    ])
+                }
+            }
+            input.addEventListener('keyup', callback);
+        </script>
+    </body>
+</html>

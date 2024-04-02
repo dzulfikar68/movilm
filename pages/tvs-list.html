@@ -148,9 +148,10 @@
                         </div>
                         <!-- END sidebar-box -->
                         <div class="sidebar-box">
-                        <h3 id="popular-title" class="heading">Popular Posts</h3>
+                        <a><h3 id="popular-title" class="heading">Popular Posts</h3></a>
                         <div class="post-entry-sidebar">
                             <ul id="popular-posts"></ul>
+                            <a class='col-sm-12 btn btn-sm btn-outline-primary'>More</a>
                         </div>
                         </div>
                         <!-- END sidebar-box -->
@@ -239,7 +240,7 @@
             var originList = []
             var firstCall = false
             var link = "tv/airing_today"
-            var popular = "tv/popular"
+            var popular = "trending/tv/day"
             var thisPage = 1
             var itemFeature = getMenuAndFeature().feature
             // let isMovie = (item.menu == "movie")
@@ -419,12 +420,13 @@
                     }
                 )
             }
-            if (itemFeature == "popular") {
-                popular = "tv/top_rated"
-                $("#popular-title").text("Top Rated TV")
-            } else {
-                $("#popular-title").text("Popular TV")
-            }
+            // if (itemFeature == "popular") {
+            //     popular = "tv/top_rated"
+            //     $("#popular-title").text("Top Rated TV")
+            // } else {
+            //     $("#popular-title").text("Popular TV")
+            // }
+            $("#popular-title").text("Trending TV")
             fetchApiPopular(popular)
         </script>
     </body>
