@@ -255,6 +255,16 @@
             $("#error-404").hide()
             $("#error-empty").hide()
 
+            function getUrlByCondition(item) {
+                if (item.media_type == "movie") {
+                    return getUrl(item)
+                } else if (item.media_type == "person") {
+                    return "#"
+                } else {
+                    return getUrlTV(item)
+                }
+            }
+
             function setTitle() {
                 let heading = $('#title-heading')
                 heading.text("Search Result: " + query)
@@ -273,6 +283,7 @@
 
             function setViewList(data) {
                 data.forEach(e => {
+                    console.log(e)
                     // target='_blank'
                     let imageView = ""
                     if(e.media_type == "person") {
@@ -295,16 +306,16 @@
                         desc = e.overview
                     }
                     var itemMovie = "<div id='item-" + e.id + "' class='blog-entry d-flex blog-entry-search-item'>" +
-                        "<a onclick='onItemClick(" + e.id + ")' href='" + getUrl(e) + "' class='img-link me-4'>" + 
+                        "<a onclick='onItemClick(" + e.id + ")' href='" + getUrlByCondition(e) + "' class='img-link me-4'>" + 
                             "<img onerror='imageError(this)' src='" + getImage(imageView) + "' alt='Image' class='img-fluid'>" +
                         "</a>" +
                         "<div>" +
                             "<span class='date'>" + moment(e.release_date).format("MMM Do YY") + 
                                 " &bullet; <a href='https://www.google.com/search?q=rating " + name + 
                                 "'>Rate: " + e.vote_average + "</a></span>" +
-                            "<h2><a onclick='onItemClick(" + e.id + ")' href='" + getUrl(e) + "'>" + name + "</a></h2>" +
+                            "<h2><a onclick='onItemClick(" + e.id + ")' href='" + getUrlByCondition(e) + "'>" + name + "</a></h2>" +
                             "<p class='overflow-wrap-2' style='width: 500px;'>" + desc + "</p>" +
-                            "<p><a onclick='onItemClick(" + e.id + ")' href='" + getUrl(e) + "' class='btn btn-sm btn-outline-primary'>Read More</a></p>" +
+                            "<p><a onclick='onItemClick(" + e.id + ")' href='" + getUrlByCondition(e) + "' class='btn btn-sm btn-outline-primary'>Read More</a></p>" +
                         "</div>" +
                     "</div>"
                     $("div#list-items").append(itemMovie)
@@ -436,7 +447,7 @@
                         desc = e.overview
                     }
                     var itemMovie = "<li>" +
-                                        "<a href='" + getUrl(e) + "'>" +
+                                        "<a href='" + getUrlByCondition(e) + "'>" +
                                             "<img onerror='imageError(this)' src='" + getImage(imageView) + "' alt='Image placeholder' class='me-4 rounded'>" +
                                             "<div class='text'>" +
                                                 "<h4>" + name + "</h4>" +
