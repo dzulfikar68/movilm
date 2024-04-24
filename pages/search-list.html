@@ -60,8 +60,8 @@
                                 <a href="../index.html" class="logo m-0 float-start">Movilm<span class="text-primary">.</span></a>
                             </div>
                             <div class="col-8 text-center">
-                                <form action="#" class="search-form d-inline-block d-lg-none">
-                                    <input type="text" class="form-control" placeholder="Search...">
+                                <form onSubmit="return false;" class="search-form d-inline-block d-lg-none">
+                                    <input id="search-form-text-2" type="text" class="form-control" placeholder="Search...">
                                     <span class="bi-search"></span>
                                 </form>
     
@@ -129,6 +129,12 @@
                     <div id="error-404">
                         <div class="fof">
                                 <h1>Halaman tidak tersedia.</h1>
+                        </div>
+                    </div>
+
+                    <div id="error-empty">
+                        <div class="fof">
+                                <h1>Pencarian tidak ditemukan</h1>
                         </div>
                     </div>
 
@@ -247,6 +253,7 @@
 
             $("#list-items").show()
             $("#error-404").hide()
+            $("#error-empty").hide()
 
             function setTitle() {
                 let heading = $('#title-heading')
@@ -341,6 +348,14 @@
                     $(".pagination-movilm").show()
                     $("#list-items").show()
                     $("#error-404").hide()
+                    $("#error-empty").hide()
+
+                    if(originList.length == 0) {
+                        $(".pagination-movilm").show()
+                        $("#list-items").hide()
+                        $("#error-404").hide()
+                        $("#error-empty").show()
+                    }
                     doScrollingView()
                 }).fail(function(data, status){
                     // var r = confirm("Halaman gagal memuat, apakah mau refresh halaman?");
@@ -351,6 +366,7 @@
                     $(".pagination-movilm").show()
                     $("#list-items").hide()
                     $("#error-404").show()
+                    $("#error-empty").hide()
                 });
             }
 
@@ -448,6 +464,8 @@
             $("#popular-title").text("Trending Post")
             fetchApiPopular(popular)
 
+            // SEARCHING FEATURE
+
             // get origin path
             function getOriginPath() {
                 let href = window.location.href
@@ -466,10 +484,7 @@
                 return origin + "?" + url.toString()
             }
 
-            var input = document.getElementById('search-form-text');
-            var callback = (e) => {
-                e.preventDefault()
-                var q = $("#search-form-text").val()
+            function doSearch(e, q) {
                 if (e.code === 'Enter') {
                     window.location.href = getDestinationPage("search-list", [
                         {
@@ -479,7 +494,22 @@
                     ])
                 }
             }
+
+            var input = document.getElementById('search-form-text');
+            var callback = (e) => {
+                e.preventDefault()
+                var q = $("#search-form-text").val()
+                doSearch(e, q)
+            }
             input.addEventListener('keyup', callback);
+
+            var input2 = document.getElementById('search-form-text-2');
+            var callback2 = (e) => {
+                e.preventDefault()
+                var q = $("#search-form-text-2").val()
+                doSearch(e, q)
+            }
+            input2.addEventListener('keyup', callback2);
         </script>
     </body>
 </html>
